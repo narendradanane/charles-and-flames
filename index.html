@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>Charles & Flames | BBQ & Street Food | Porwal Road Pune</title>
+  <meta name="description" content="Charles & Flames is a BBQ and street food cart located on Porwal Road, Lohegaon Pune near Hotel Torna Lodge. Serving fresh grill, breakfast items, and live BBQ." />
+  <meta name="keywords" content="BBQ Pune, Street Food Pune, Dhanori food cart, Porwal Road food, grill food Pune, Charles Flames Pune" />
+  <meta name="author" content="Charles & Flames" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Charles & Flames | BBQ & Street Food | Porwal Road Pune" />
+  <meta property="og:description" content="Built on Promise, Fired with Passion. Premium BBQ & Street Food in Lohegaon, Pune." />
+  <meta property="og:type" content="restaurant" />
+  <meta property="og:url" content="https://charlesandflames.in" />
+  <meta property="og:image" content="IMG_2869.PNG" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Local Business Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Charles & Flames",
+    "description": "BBQ and street food cart specializing in grilled food and breakfast items",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Porwal Rd, opp. Hotel Torna Lodge, Jakatnaka, Lohegaon",
+      "addressLocality": "Pune",
+      "addressRegion": "Maharashtra",
+      "postalCode": "411047",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "18.5793",
+      "longitude": "73.9198"
+    },
+    "openingHours": "Mo-Su 17:00-04:00",
+    "servesCuisine": ["BBQ", "Street Food", "Breakfast", "Grilled Food"],
+    "priceRange": "₹",
+    "sameAs": []
+  }
+  </script>
+</head>
+<body>
+
+<!-- ===== SCROLL PROGRESS BAR ===== -->
+<div id="scroll-progress"></div>
+
+<!-- ===== NAVIGATION ===== -->
+<nav id="navbar">
+  <div class="nav-container">
+    <a href="#home" class="nav-logo">
+      <img src="IMG_2869.PNG" alt="Charles & Flames Logo" class="logo-img" />
+      <span class="nav-brand">Charles <span class="amp">&</span> Flames</span>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#menu" class="nav-link">Menu</a></li>
+      <li><a href="#order" class="nav-link">Order Online</a></li>
+      <li><a href="#gallery" class="nav-link">Gallery</a></li>
+      <li><a href="#location" class="nav-link">Location</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ===== HERO SECTION ===== -->
+<section id="home" class="hero">
+  <!-- Fire Particle Canvas -->
+  <canvas id="fire-canvas"></canvas>
+
+  <!-- Parallax Layers -->
+  <div class="parallax-bg" id="parallax-bg"></div>
+  <div class="smoke-overlay"></div>
+  <div class="ember-overlay"></div>
+
+  <div class="hero-content" data-aos="fade-up" data-aos-duration="1200">
+    <div class="hero-logo-wrap">
+      <img src="IMG_2869.PNG" alt="Charles & Flames" class="hero-logo" />
+    </div>
+    <h1 class="hero-title">
+      <span class="fire-text">Charles</span><span class="amp-hero">&nbsp;&amp;&nbsp;</span><span class="fire-text">Flames</span>
+    </h1>
+    <p class="hero-tagline">Built on Promise, Fired with Passion</p>
+    <div class="hero-location"><i class="fas fa-map-marker-alt"></i> Porwal Road, Lohegaon, Pune</div>
+    <div class="hero-btns">
+      <a href="#menu" class="btn btn-primary"><i class="fas fa-utensils"></i> View Menu</a>
+      <a href="#order" class="btn btn-secondary"><i class="fas fa-motorcycle"></i> Order Online</a>
+      <a href="#location" class="btn btn-outline"><i class="fas fa-directions"></i> Get Directions</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll-hint">
+    <span>Scroll Down</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ===== ABOUT STRIP ===== -->
+<section class="about-strip">
+  <div class="strip-items">
+    <div class="strip-item" data-aos="fade-up" data-aos-delay="0">
+      <i class="fas fa-fire"></i>
+      <span>Live BBQ Grill</span>
+    </div>
+    <div class="strip-item" data-aos="fade-up" data-aos-delay="100">
+      <i class="fas fa-drumstick-bite"></i>
+      <span>Fresh Every Day</span>
+    </div>
+    <div class="strip-item" data-aos="fade-up" data-aos-delay="200">
+      <i class="fas fa-star"></i>
+      <span>Premium Quality</span>
+    </div>
+    <div class="strip-item" data-aos="fade-up" data-aos-delay="300">
+      <i class="fas fa-clock"></i>
+      <span>5 PM – 4 AM</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MENU SECTION ===== -->
+<section id="menu" class="menu-section">
+  <div class="section-header" data-aos="fade-up">
+    <p class="section-label">Our Offerings</p>
+    <h2 class="section-title">The <span class="gold">Menu</span></h2>
+    <div class="title-divider"><span class="flame-icon">🔥</span></div>
+  </div>
+
+  <!-- BBQ & Grill -->
+  <div class="menu-category" data-aos="fade-up">
+    <h3 class="category-title"><i class="fas fa-fire-flame-curved"></i> Grill & BBQ</h3>
+    <div class="menu-grid">
+
+      <div class="menu-card bbq-card" data-tilt>
+        <div class="card-glow fire-glow"></div>
+        <div class="card-img">
+          <div class="img-placeholder bbq">
+            <i class="fas fa-drumstick-bite"></i>
+          </div>
+        </div>
+        <div class="card-body">
+          <h4>Iteam 1</h4>
+          <p>Iteam Description</p>
+          <div class="card-footer">
+            <span class="price">₹ XXXX</span>
+            <span class="badge nonveg">NON-VEG</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card bbq-card" data-tilt>
+        <div class="card-glow fire-glow"></div>
+        <div class="card-img">
+          <div class="img-placeholder bbq">
+            <i class="fas fa-cheese"></i>
+          </div>
+        </div>
+        <div class="card-body">
+          <h4>Iteam 2</h4>
+          <p>Iteam Description</p>
+          <div class="card-footer">
+            <span class="price">₹ XXXX</span>
+            <span class="badge veg">VEG</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card bbq-card" data-tilt>
+        <div class="card-glow fire-glow"></div>
+        <div class="card-img">
+          <div class="img-placeholder bbq">
+            <i class="fas fa-hotdog"></i>
+          </div>
+        </div>
+        <div class="card-body">
+          <h4>Iteam 3</h4>
+          <p>Iteam Description</p>
+          <div class="card-footer">
+            <span class="price">₹ XXXX</span>
+            <span class="badge choice">CHOICE</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== ORDER ONLINE SECTION ===== -->
+<section id="order" class="order-section">
+  <div class="section-header" data-aos="fade-up">
+    <p class="section-label">Delivered To Your Door</p>
+    <h2 class="section-title">Order <span class="gold">Online</span></h2>
+    <div class="title-divider"><span class="flame-icon">🔥</span></div>
+  </div>
+  <div class="order-cards" data-aos="fade-up">
+
+    <a href="https://www.zomato.com" target="_blank" class="order-card zomato-card">
+      <div class="order-logo">
+        <svg viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg" width="160">
+          <text x="0" y="50" font-family="Arial Black" font-size="52" font-weight="900" fill="#E23744">zomato</text>
+        </svg>
+      </div>
+      <p>Fast Delivery • Live Tracking</p>
+      <div class="order-btn">Order on Zomato <i class="fas fa-arrow-right"></i></div>
+    </a>
+
+    <a href="https://www.swiggy.com" target="_blank" class="order-card swiggy-card">
+      <div class="order-logo">
+        <svg viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg" width="160">
+          <text x="0" y="50" font-family="Arial Black" font-size="52" font-weight="900" fill="#FC8019">swiggy</text>
+        </svg>
+      </div>
+      <p>30 Min Delivery • Wide Coverage</p>
+      <div class="order-btn">Order on Swiggy <i class="fas fa-arrow-right"></i></div>
+    </a>
+
+  </div>
+</section>
+
+<!-- ===== GALLERY SECTION ===== -->
+<section id="gallery" class="gallery-section">
+  <div class="section-header" data-aos="fade-up">
+    <p class="section-label">From Our Grill</p>
+    <h2 class="section-title">Food <span class="gold">Gallery</span></h2>
+    <div class="title-divider"><span class="flame-icon">🔥</span></div>
+  </div>
+  <div class="gallery-grid" data-aos="fade-up">
+
+    <div class="gallery-item tall">
+      <div class="gallery-img g1"><div class="gal-overlay"><span>Live Grill</span></div></div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-img g2"><div class="gal-overlay"><span>Chicken Skewers</span></div></div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-img g3"><div class="gal-overlay"><span>Street Cart</span></div></div>
+    </div>
+    <div class="gallery-item wide">
+      <div class="gallery-img g4"><div class="gal-overlay"><span>BBQ Rolls</span></div></div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-img g5"><div class="gal-overlay"><span>Morning Chai</span></div></div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-img g6"><div class="gal-overlay"><span>Happy Customers</span></div></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== LOCATION SECTION ===== -->
+<section id="location" class="location-section">
+  <div class="section-header" data-aos="fade-up">
+    <p class="section-label">Come Find Us</p>
+    <h2 class="section-title">Our <span class="gold">Location</span></h2>
+    <div class="title-divider"><span class="flame-icon">🔥</span></div>
+  </div>
+  <div class="location-wrap" data-aos="fade-up">
+    <div class="location-info">
+      <div class="loc-card">
+        <div class="loc-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <div>
+          <h4>Address</h4>
+          <p>Porwal Rd, opp. Hotel Torna Lodge,<br>Jakatnaka, Lohegaon,<br>Pune, Maharashtra 411047</p>
+        </div>
+      </div>
+      <div class="loc-card">
+        <div class="loc-icon"><i class="fas fa-clock"></i></div>
+        <div>
+          <h4>Opening Hours</h4>
+          <p>Monday – Sunday<br><strong>5:00 PM – 4:00 AM</strong></p>
+        </div>
+      </div>
+      <div class="loc-card">
+        <div class="loc-icon"><i class="fas fa-phone"></i></div>
+        <div>
+          <h4>Call Us</h4>
+          <p>+91 XXXXX XXXXX</p>
+        </div>
+      </div>
+      <div class="loc-btns">
+        <a href="https://maps.google.com/?q=Charles+and+Flames+Porwal+Road+Lohegaon+Pune" target="_blank" class="btn btn-primary">
+          <i class="fas fa-directions"></i> Get Directions
+        </a>
+        <a href="tel:+91XXXXXXXXXX" class="btn btn-outline">
+          <i class="fas fa-phone"></i> Call Now
+        </a>
+      </div>
+    </div>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.0!2d73.9198!3d18.5793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zCharles+%26+Flames!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Charles & Flames Location Map">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT SECTION ===== -->
+<section id="contact" class="contact-section">
+  <div class="section-header" data-aos="fade-up">
+    <p class="section-label">Let's Talk</p>
+    <h2 class="section-title">Get in <span class="gold">Touch</span></h2>
+    <div class="title-divider"><span class="flame-icon">🔥</span></div>
+  </div>
+  <div class="contact-cards" data-aos="fade-up">
+
+    <div class="contact-card">
+      <i class="fas fa-phone-alt"></i>
+      <h4>Call Us</h4>
+      <p>+91 XXXXX XXXXX</p>
+      <a href="tel:+91XXXXXXXXXX" class="btn btn-sm">Call Now</a>
+    </div>
+
+    <div class="contact-card">
+      <i class="fab fa-whatsapp"></i>
+      <h4>WhatsApp</h4>
+      <p>Chat with us directly for orders & inquiries</p>
+      <a href="https://wa.me/91XXXXXXXXXX?text=Hi%20Charles%20%26%20Flames!%20I'd%20like%20to%20place%20an%20order." target="_blank" class="btn btn-sm whatsapp-btn">
+        <i class="fab fa-whatsapp"></i> Chat Now
+      </a>
+    </div>
+
+    <div class="contact-card">
+      <i class="fas fa-clock"></i>
+      <h4>Hours</h4>
+      <p>Mon – Sun<br><strong>5:00 PM – 4:00 AM</strong></p>
+      <span class="open-badge"><span class="dot"></span> We're Open Now</span>
+    </div>
+
+    <div class="contact-card">
+      <i class="fas fa-map-marker-alt"></i>
+      <h4>Find Us</h4>
+      <p>Porwal Rd, opp. Hotel Torna Lodge, Lohegaon, Pune</p>
+      <a href="https://maps.google.com/?q=Porwal+Rd+Lohegaon+Pune" target="_blank" class="btn btn-sm">Directions</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="IMG_2869.PNG" alt="Charles & Flames" class="footer-logo" />
+      <h3>Charles <span class="amp">&</span> Flames</h3>
+      <p class="footer-tagline">Built on Promise, Fired with Passion</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#order">Order Online</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p><i class="fas fa-map-marker-alt"></i> Porwal Rd, opp. Hotel Torna Lodge,<br>Lohegaon, Pune 411047</p>
+      <p><i class="fas fa-clock"></i> 5:00 PM – 4:00 AM Daily</p>
+      <p><i class="fas fa-phone"></i> +91 XXXXX XXXXX</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 Charles & Flames. All rights reserved. | Porwal Road, Pune</p>
+  </div>
+</footer>
+
+<!-- ===== FLOATING WHATSAPP ===== -->
+<a href="https://wa.me/91XXXXXXXXXX?text=Hi%20Charles%20%26%20Flames!%20I'd%20like%20to%20place%20an%20order." target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+  <span class="wa-tooltip">Order via WhatsApp</span>
+</a>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
