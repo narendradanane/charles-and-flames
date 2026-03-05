@@ -222,6 +222,7 @@ img { max-width: 100%; }
   text-align: center;
   padding: 40px 20px;
   max-width: 900px;
+  width: 100%;
 }
 
 .hero-logo-wrap {
@@ -245,9 +246,9 @@ img { max-width: 100%; }
 
 .hero-title {
   font-family: var(--font-display);
-  font-size: clamp(2.2rem, 5.5vw, 4.8rem);
+  font-size: clamp(0.8rem, 6vw, 4.8rem);
   font-weight: 900;
-  letter-spacing: 4px;
+  letter-spacing: clamp(0.5px, 0.4vw, 4px);
   line-height: 1.1;
   margin-bottom: 16px;
   white-space: nowrap;
@@ -1087,7 +1088,6 @@ img { max-width: 100%; }
   .nav-link { font-size: 1rem; }
 
   .hero-logo { width: 160px; height: 160px; }
-  .hero-title { white-space: normal; font-size: 2rem; }
   .hero-btns { flex-direction: column; align-items: center; }
 
   .menu-grid { grid-template-columns: 1fr; }
