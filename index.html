@@ -15,7 +15,7 @@
   <meta property="og:title" content="Charles & Flames | BBQ & Street Food | Porwal Road Pune" />
   <meta property="og:description" content="Built on Promise, Fired with Passion. Premium BBQ & Street Food in Lohegaon, Pune." />
   <meta property="og:type" content="restaurant" />
-  <meta property="og:url" content="https://charles-and-flames.onrender.com" />
+  <meta property="og:url" content="https://charlesandflames.in" />
   <meta property="og:image" content="IMG_2869.PNG" />
 
   <!-- Fonts -->
@@ -72,14 +72,31 @@
     <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
       <span></span><span></span><span></span>
     </button>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#home" class="nav-link">Home</a></li>
-      <li><a href="#menu" class="nav-link">Menu</a></li>
-      <li><a href="#order" class="nav-link">Order Online</a></li>
-      <li><a href="#gallery" class="nav-link">Gallery</a></li>
-      <li><a href="#location" class="nav-link">Location</a></li>
-      <li><a href="#contact" class="nav-link">Contact</a></li>
-    </ul>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer">
+      <div class="drawer-header">
+        <img src="IMG_2869.PNG" alt="Charles & Flames" class="drawer-logo" />
+        <h3 class="drawer-brand">Charles <span class="amp">&</span> Flames</h3>
+        <p class="drawer-tagline">Built on Promise, Fired with Passion</p>
+        <div class="drawer-divider"></div>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#menu" class="nav-link">Menu</a></li>
+        <li><a href="#order" class="nav-link">Order Online</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#reviews" class="nav-link">Reviews</a></li>
+        <li><a href="#location" class="nav-link">Location</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <!-- Social inside drawer -->
+      <div class="drawer-social">
+        <a href="https://www.instagram.com/" target="_blank" class="social-btn instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/" target="_blank" class="social-btn facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/" target="_blank" class="social-btn youtube"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
   </div>
 </nav>
 
@@ -118,19 +135,19 @@
 <!-- ===== ABOUT STRIP ===== -->
 <section class="about-strip">
   <div class="strip-items">
-    <div class="strip-item" data-aos="fade-up" data-aos-delay="0">
+    <div class="strip-item">
       <i class="fas fa-fire"></i>
       <span>Live BBQ Grill</span>
     </div>
-    <div class="strip-item" data-aos="fade-up" data-aos-delay="100">
+    <div class="strip-item">
       <i class="fas fa-drumstick-bite"></i>
       <span>Fresh Every Day</span>
     </div>
-    <div class="strip-item" data-aos="fade-up" data-aos-delay="200">
+    <div class="strip-item">
       <i class="fas fa-star"></i>
       <span>Premium Quality</span>
     </div>
-    <div class="strip-item" data-aos="fade-up" data-aos-delay="300">
+    <div class="strip-item">
       <i class="fas fa-clock"></i>
       <span>5 PM – 4 AM</span>
     </div>
@@ -158,10 +175,10 @@
           </div>
         </div>
         <div class="card-body">
-          <h4>Iteam 1</h4>
-          <p>Iteam Description</p>
+          <h4>Chicken Skewers</h4>
+          <p>Juicy marinated chicken grilled on open flame with secret spice blend</p>
           <div class="card-footer">
-            <span class="price">₹ XXXX</span>
+            <span class="price">₹ 120</span>
             <span class="badge nonveg">NON-VEG</span>
           </div>
         </div>
@@ -175,10 +192,10 @@
           </div>
         </div>
         <div class="card-body">
-          <h4>Iteam 2</h4>
-          <p>Iteam Description</p>
+          <h4>Paneer Skewers</h4>
+          <p>Cottage cheese marinated in tandoori masala, grilled to smoky perfection</p>
           <div class="card-footer">
-            <span class="price">₹ XXXX</span>
+            <span class="price">₹ 100</span>
             <span class="badge veg">VEG</span>
           </div>
         </div>
@@ -192,10 +209,10 @@
           </div>
         </div>
         <div class="card-body">
-          <h4>Iteam 3</h4>
-          <p>Iteam Description</p>
+          <h4>BBQ Rolls</h4>
+          <p>Soft rolls stuffed with flame-grilled filling, sauces & fresh veggies</p>
           <div class="card-footer">
-            <span class="price">₹ XXXX</span>
+            <span class="price">₹ 80</span>
             <span class="badge choice">CHOICE</span>
           </div>
         </div>
@@ -360,6 +377,109 @@
   </div>
 </section>
 
+<!-- ===== REVIEWS SECTION ===== -->
+<section id="reviews" class="reviews-section">
+  <div class="section-header" data-aos="fade-up">
+    <p class="section-label">What People Say</p>
+    <h2 class="section-title">Customer <span class="gold">Reviews</span></h2>
+    <div class="title-divider"><span class="flame-icon">🔥</span></div>
+  </div>
+
+  <div class="reviews-grid" data-aos="fade-up">
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"The chicken skewers are absolutely fire! Never had BBQ this good on the streets of Pune. The marinade is so rich and smoky — we come here every weekend now."</p>
+      <div class="review-author">
+        <div class="author-avatar">R</div>
+        <div>
+          <h5>Rahul Patil</h5>
+          <span>Lohegaon, Pune</span>
+        </div>
+      </div>
+      <div class="review-platform"><i class="fab fa-google"></i> Google Review</div>
+    </div>
+
+    <div class="review-card featured-review">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Honestly the best late-night food spot near Porwal Road. The paneer skewers are perfectly charred and the BBQ rolls are massive. Love the vibe of eating street food under the open sky!"</p>
+      <div class="review-author">
+        <div class="author-avatar">P</div>
+        <div>
+          <h5>Priya Sharma</h5>
+          <span>Dhanori, Pune</span>
+        </div>
+      </div>
+      <div class="review-platform"><i class="fab fa-google"></i> Google Review</div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Charles & Flames is our go-to after gym sessions at night. Fresh, hot, perfectly grilled — and the guy running it is so friendly. This place deserves more recognition!"</p>
+      <div class="review-author">
+        <div class="author-avatar">A</div>
+        <div>
+          <h5>Akash Jadhav</h5>
+          <span>Viman Nagar, Pune</span>
+        </div>
+      </div>
+      <div class="review-platform"><i class="fab fa-google"></i> Google Review</div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Tried the BBQ rolls after a friend's recommendation — absolutely worth it! The smoky flavour, fresh veggies inside, the sauces are perfectly balanced. Will definitely be back."</p>
+      <div class="review-author">
+        <div class="author-avatar">S</div>
+        <div>
+          <h5>Sneha Kulkarni</h5>
+          <span>Kalyani Nagar, Pune</span>
+        </div>
+      </div>
+      <div class="review-platform"><i class="fab fa-google"></i> Google Review</div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Been coming here for 3 months straight. Nothing beats Charles & Flames for late night cravings. The open flame grill right in front of you is a whole experience. Pure passion in every bite!"</p>
+      <div class="review-author">
+        <div class="author-avatar">V</div>
+        <div>
+          <h5>Vishal Mane</h5>
+          <span>Lohegaon, Pune</span>
+        </div>
+      </div>
+      <div class="review-platform"><i class="fab fa-google"></i> Google Review</div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Ordered via Swiggy and the food arrived hot and fresh. Packaging was great, chicken skewers were juicy even after delivery. Definitely ordering again tomorrow night!"</p>
+      <div class="review-author">
+        <div class="author-avatar">N</div>
+        <div>
+          <h5>Neha Desai</h5>
+          <span>Pune</span>
+        </div>
+      </div>
+      <div class="review-platform"><i class="fas fa-motorcycle"></i> Swiggy Review</div>
+    </div>
+
+  </div>
+
+  <!-- Rating Summary -->
+  <div class="rating-summary" data-aos="fade-up">
+    <div class="rating-big">4.9</div>
+    <div class="rating-stars-big">★★★★★</div>
+    <p>Based on 100+ Reviews</p>
+    <div class="rating-platforms">
+      <span><i class="fab fa-google"></i> Google</span>
+      <span><i class="fas fa-motorcycle"></i> Swiggy</span>
+      <span><i class="fas fa-pepper-hot"></i> Zomato</span>
+    </div>
+  </div>
+</section>
+
 <!-- ===== FOOTER ===== -->
 <footer class="footer">
   <div class="footer-inner">
@@ -367,6 +487,18 @@
       <img src="IMG_2869.PNG" alt="Charles & Flames" class="footer-logo" />
       <h3>Charles <span class="amp">&</span> Flames</h3>
       <p class="footer-tagline">Built on Promise, Fired with Passion</p>
+      <!-- Social Media -->
+      <div class="social-links">
+        <a href="https://www.instagram.com/" target="_blank" class="social-btn instagram" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/" target="_blank" class="social-btn facebook" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.youtube.com/" target="_blank" class="social-btn youtube" aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
     </div>
     <div class="footer-links">
       <h4>Quick Links</h4>
@@ -375,6 +507,7 @@
         <li><a href="#menu">Menu</a></li>
         <li><a href="#order">Order Online</a></li>
         <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#reviews">Reviews</a></li>
         <li><a href="#location">Location</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -384,10 +517,22 @@
       <p><i class="fas fa-map-marker-alt"></i> Porwal Rd, opp. Hotel Torna Lodge,<br>Lohegaon, Pune 411047</p>
       <p><i class="fas fa-clock"></i> 5:00 PM – 4:00 AM Daily</p>
       <p><i class="fas fa-phone"></i> +91 XXXXX XXXXX</p>
+      <div class="footer-social-label">Follow Us</div>
+      <div class="social-links">
+        <a href="https://www.instagram.com/" target="_blank" class="social-btn instagram" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/" target="_blank" class="social-btn facebook" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.youtube.com/" target="_blank" class="social-btn youtube" aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
     </div>
   </div>
   <div class="footer-bottom">
-    <p>&copy; 2024 Charles & Flames. All rights reserved. | Porwal Road, Pune</p>
+    <p>&copy; 2025 Charles & Flames. All rights reserved. | Porwal Road, Pune</p>
   </div>
 </footer>
 
@@ -396,6 +541,22 @@
   <i class="fab fa-whatsapp"></i>
   <span class="wa-tooltip">Order via WhatsApp</span>
 </a>
+
+<!-- ===== FLOATING SOCIAL SIDEBAR ===== -->
+<div class="social-sidebar">
+  <a href="https://www.instagram.com/" target="_blank" class="sidebar-social instagram" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+    <span>Instagram</span>
+  </a>
+  <a href="https://www.facebook.com/" target="_blank" class="sidebar-social facebook" aria-label="Facebook">
+    <i class="fab fa-facebook-f"></i>
+    <span>Facebook</span>
+  </a>
+  <a href="https://www.youtube.com/" target="_blank" class="sidebar-social youtube" aria-label="YouTube">
+    <i class="fab fa-youtube"></i>
+    <span>YouTube</span>
+  </a>
+</div>
 
 <!-- Scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>

@@ -30,17 +30,18 @@ window.addEventListener('scroll', () => {
 /* ===== HAMBURGER MENU ===== */
 const hamburger = document.getElementById('hamburger');
 const navLinks  = document.getElementById('nav-links');
+const drawer    = document.getElementById('mobile-drawer');
 
 hamburger.addEventListener('click', () => {
+  const isOpen = drawer && drawer.classList.toggle('open');
   hamburger.classList.toggle('open');
-  navLinks.classList.toggle('open');
-  document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+  document.body.style.overflow = isOpen ? 'hidden' : '';
 });
 
 navLinks.querySelectorAll('.nav-link').forEach(link => {
   link.addEventListener('click', () => {
     hamburger.classList.remove('open');
-    navLinks.classList.remove('open');
+    if (drawer) drawer.classList.remove('open');
     document.body.style.overflow = '';
   });
 });
@@ -389,9 +390,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* ===== CLOSE MENU ON OUTSIDE CLICK ===== */
 document.addEventListener('click', e => {
-  if (!navbar.contains(e.target) && navLinks.classList.contains('open')) {
+  if (drawer && !drawer.contains(e.target) && !hamburger.contains(e.target) && drawer.classList.contains('open')) {
     hamburger.classList.remove('open');
-    navLinks.classList.remove('open');
+    drawer.classList.remove('open');
     document.body.style.overflow = '';
   }
 });
