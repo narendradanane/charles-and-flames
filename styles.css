@@ -1066,6 +1066,11 @@ img { max-width: 100%; }
   .order-cards { grid-template-columns: 1fr; max-width: 400px; }
 }
 
+/* Hide mobile drawer on desktop */
+.mobile-drawer{
+  display: none;
+}
+
 @media (max-width: 768px) {
   .hamburger { display: flex; }
 
