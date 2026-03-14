@@ -69,6 +69,17 @@
       <img src="IMG_2869.PNG" alt="Charles & Flames Logo" class="logo-img" />
       <span class="nav-brand">Charles <span class="amp">&</span> Flames</span>
     </a>
+    <!-- Desktop Nav Links -->
+    <ul class="desktop-nav-links" id="nav-links">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#menu" class="nav-link">Menu</a></li>
+      <li><a href="#order" class="nav-link">Order Online</a></li>
+      <li><a href="#gallery" class="nav-link">Gallery</a></li>
+      <li><a href="#reviews" class="nav-link">Reviews</a></li>
+      <li><a href="#location" class="nav-link">Location</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+
     <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
       <span></span><span></span><span></span>
     </button>
@@ -102,6 +113,11 @@
 
 <!-- ===== HERO SECTION ===== -->
 <section id="home" class="hero">
+  <!-- Background Video -->
+  <video class="hero-video" autoplay muted loop playsinline preload="auto">
+    <source src="Realistic_BBQ_Chicken_Tikka_Video.mp4" type="video/mp4" />
+  </video>
+
   <!-- Fire Particle Canvas -->
   <canvas id="fire-canvas"></canvas>
 
@@ -156,29 +172,33 @@
 
 <!-- ===== MENU SECTION ===== -->
 <section id="menu" class="menu-section">
+  <!-- Background Video -->
+  <video class="menu-video-bg" autoplay muted loop playsinline preload="auto">
+    <source src="Indian_Street_Food_Cinematic_Video.mp4" type="video/mp4" />
+  </video>
+  <div class="menu-video-overlay"></div>
   <div class="section-header" data-aos="fade-up">
     <p class="section-label">Our Offerings</p>
     <h2 class="section-title">The <span class="gold">Menu</span></h2>
     <div class="title-divider"><span class="flame-icon">🔥</span></div>
   </div>
 
-  <!-- BBQ & Grill -->
+  <!-- Grill & BBQ -->
   <div class="menu-category" data-aos="fade-up">
-    <h3 class="category-title"><i class="fas fa-fire-flame-curved"></i> Grill & BBQ</h3>
+    <h3 class="category-title"><i class="fas fa-fire-flame-curved"></i> Grill &amp; BBQ</h3>
     <div class="menu-grid">
 
       <div class="menu-card bbq-card" data-tilt>
         <div class="card-glow fire-glow"></div>
         <div class="card-img">
-          <div class="img-placeholder bbq">
-            <i class="fas fa-drumstick-bite"></i>
-          </div>
+          <img src="tandoori-chicken.png" alt="Tandoori Chicken" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="img-placeholder bbq" style="display:none;"><i class="fas fa-drumstick-bite"></i></div>
         </div>
         <div class="card-body">
-          <h4>Chicken Skewers</h4>
-          <p>Juicy marinated chicken grilled on open flame with secret spice blend</p>
+          <h4>Tandoori Chicken</h4>
+          <p>Whole chicken marinated in aromatic tandoori masala, grilled to charred perfection on open flame</p>
           <div class="card-footer">
-            <span class="price">₹ 120</span>
+            <span class="price">&#8377; xxx</span>
             <span class="badge nonveg">NON-VEG</span>
           </div>
         </div>
@@ -187,16 +207,15 @@
       <div class="menu-card bbq-card" data-tilt>
         <div class="card-glow fire-glow"></div>
         <div class="card-img">
-          <div class="img-placeholder bbq">
-            <i class="fas fa-cheese"></i>
-          </div>
+          <img src="bbq-chicken.png" alt="BBQ Chicken" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="img-placeholder bbq" style="display:none;"><i class="fas fa-drumstick-bite"></i></div>
         </div>
         <div class="card-body">
-          <h4>Paneer Skewers</h4>
-          <p>Cottage cheese marinated in tandoori masala, grilled to smoky perfection</p>
+          <h4>BBQ Chicken</h4>
+          <p>Smoky flame-grilled chicken glazed with our signature BBQ sauce and secret spice blend</p>
           <div class="card-footer">
-            <span class="price">₹ 100</span>
-            <span class="badge veg">VEG</span>
+            <span class="price">&#8377; xxx</span>
+            <span class="badge nonveg">NON-VEG</span>
           </div>
         </div>
       </div>
@@ -204,22 +223,160 @@
       <div class="menu-card bbq-card" data-tilt>
         <div class="card-glow fire-glow"></div>
         <div class="card-img">
-          <div class="img-placeholder bbq">
-            <i class="fas fa-hotdog"></i>
-          </div>
+          <img src="chicken-malai-tikka.png" alt="Chicken Malai Tikka" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="img-placeholder bbq" style="display:none;"><i class="fas fa-fire"></i></div>
         </div>
         <div class="card-body">
-          <h4>BBQ Rolls</h4>
-          <p>Soft rolls stuffed with flame-grilled filling, sauces & fresh veggies</p>
+          <h4>Chicken Malai Tikka</h4>
+          <p>Tender chicken pieces marinated in creamy malai and mild spices, grilled on skewers</p>
           <div class="card-footer">
-            <span class="price">₹ 80</span>
-            <span class="badge choice">CHOICE</span>
+            <span class="price">&#8377; xxx</span>
+            <span class="badge nonveg">NON-VEG</span>
           </div>
         </div>
       </div>
 
     </div>
   </div>
+
+  <!-- Gravy & Dry -->
+  <div class="menu-category" data-aos="fade-up">
+    <h3 class="category-title"><i class="fas fa-bowl-food"></i> Gravy &amp; Dry</h3>
+    <div class="menu-grid">
+
+      <div class="menu-card" data-tilt>
+        <div class="card-glow"></div>
+        <div class="card-img">
+          <img src="chicken-curry.png" alt="Chicken Curry" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="img-placeholder" style="display:none;"><i class="fas fa-bowl-food"></i></div>
+        </div>
+        <div class="card-body">
+          <h4>Chicken Curry</h4>
+          <p>Rich, slow-cooked chicken curry in a bold masala gravy packed with authentic spices</p>
+          <div class="card-footer">
+            <span class="price">&#8377; xxx</span>
+            <span class="badge nonveg">NON-VEG</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-tilt>
+        <div class="card-glow"></div>
+        <div class="card-img">
+          <img src="kaleji-suka.png" alt="Kaleji Suka" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="img-placeholder" style="display:none;"><i class="fas fa-utensils"></i></div>
+        </div>
+        <div class="card-body">
+          <h4>Kaleji Suka</h4>
+          <p>Dry-style spiced liver cooked with onions, green chillies and aromatic masalas — a street food classic</p>
+          <div class="card-footer">
+            <span class="price">&#8377; xxx</span>
+            <span class="badge nonveg">NON-VEG</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-tilt>
+        <div class="card-glow veg-glow"></div>
+        <div class="card-img">
+          <img src="lachcha-paratha.png" alt="Lachcha Paratha" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="img-placeholder veg" style="display:none;"><i class="fas fa-bread-slice"></i></div>
+        </div>
+        <div class="card-body">
+          <h4>Lachcha Paratha</h4>
+          <p>Flaky, layered whole-wheat paratha cooked on the tawa with a golden crispy finish</p>
+          <div class="card-footer">
+            <span class="price">&#8377; xxx</span>
+            <span class="badge veg">VEG</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Momos -->
+  <div class="menu-category" data-aos="fade-up">
+    <h3 class="category-title"><i class="fas fa-circle-dot"></i> Momos</h3>
+    <div class="menu-grid">
+
+      <div class="menu-card" data-tilt>
+        <div class="card-glow veg-glow"></div>
+        <div class="card-img">
+          <img src="momos-veg.png" alt="Momos Veg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="img-placeholder veg" style="display:none;"><i class="fas fa-circle-dot"></i></div>
+        </div>
+        <div class="card-body">
+          <h4>Momos &mdash; Veg</h4>
+          <p>Soft steamed or crispy fried momos filled with spiced mixed vegetables, served with red chutney</p>
+          <div class="card-footer">
+            <span class="price">&#8377; xxx</span>
+            <span class="badge veg">VEG</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-tilt>
+        <div class="card-glow fire-glow"></div>
+        <div class="card-img">
+          <img src="momos-nonveg.png" alt="Momos Non-Veg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="img-placeholder bbq" style="display:none;"><i class="fas fa-circle-dot"></i></div>
+        </div>
+        <div class="card-body">
+          <h4>Momos &mdash; Non-Veg</h4>
+          <p>Soft steamed or crispy fried momos filled with seasoned minced chicken, served with red chutney</p>
+          <div class="card-footer">
+            <span class="price">&#8377; xxx</span>
+            <span class="badge nonveg">NON-VEG</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Beverages -->
+  <div class="menu-category" data-aos="fade-up">
+    <h3 class="category-title"><i class="fas fa-mug-hot"></i> Beverages</h3>
+    <div class="menu-grid">
+
+      <div class="menu-card" data-tilt>
+        <div class="card-glow veg-glow"></div>
+        <div class="card-img">
+          <img src="beverage.png" alt="Beverage" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="img-placeholder veg" style="display:none;"><i class="fas fa-glass-water"></i></div>
+        </div>
+        <div class="card-body">
+          <h4>Beverage</h4>
+          <p>Refreshing cold and hot drinks to complement your meal perfectly</p>
+          <div class="card-footer">
+            <span class="price">&#8377; xxx</span>
+            <span class="badge veg">VEG</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-tilt>
+        <div class="card-glow veg-glow"></div>
+        <div class="card-img">
+          <img src="special-tea.png" alt="Special Tea" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="img-placeholder veg" style="display:none;"><i class="fas fa-mug-hot"></i></div>
+        </div>
+        <div class="card-body">
+          <h4>Special Tea</h4>
+          <p>Our signature masala chai brewed with hand-picked spices &mdash; the perfect way to end your meal</p>
+          <div class="card-footer">
+            <span class="price">&#8377; xxx</span>
+            <span class="badge veg">VEG</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PLACEHOLDER NEW GRID END -->
+
 </section>
 
 <!-- ===== ORDER ONLINE SECTION ===== -->
@@ -316,7 +473,7 @@
         </div>
       </div>
       <div class="loc-btns">
-        <a href="https://maps.google.com/?q=Charles+and+Flames+Porwal+Road+Lohegaon+Pune" target="_blank" class="btn btn-primary">
+        <a href="https://www.google.com/maps/place/Charles+%26+Flames/@18.5980534,73.9086507,20.25z" target="_blank" class="btn btn-primary">
           <i class="fas fa-directions"></i> Get Directions
         </a>
         <a href="tel:+91XXXXXXXXXX" class="btn btn-outline">
@@ -326,7 +483,7 @@
     </div>
     <div class="map-container">
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.0!2d73.9198!3d18.5793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zCharles+%26+Flames!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d491.5!2d73.9086507!3d18.5980534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c7379e2b0495%3A0xd5b30eb14375d616!2sCharles%20%26%20Flames!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
         width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
         title="Charles & Flames Location Map">
@@ -342,6 +499,49 @@
     <h2 class="section-title">Get in <span class="gold">Touch</span></h2>
     <div class="title-divider"><span class="flame-icon">🔥</span></div>
   </div>
+  <!-- Feedback Form -->
+  <div class="feedback-form-wrap" data-aos="fade-up">
+    <div class="feedback-form-inner">
+      <h3 class="feedback-form-title">Share Your <span class="gold">Feedback</span></h3>
+      <p class="feedback-form-sub">We'd love to hear from you 🔥</p>
+      <div class="feedback-form" id="feedback-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fb-name">Your Name</label>
+            <input type="text" id="fb-name" placeholder="e.g. Vinay Agarwal" autocomplete="off" />
+          </div>
+          <div class="form-group">
+            <label for="fb-email">Email Address</label>
+            <input type="email" id="fb-email" placeholder="e.g. vinayagarwal@email.com" autocomplete="off" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="fb-feedback">Your Feedback</label>
+          <textarea id="fb-feedback" rows="4" placeholder="Tell us about your experience at Charles & Flames..."></textarea>
+        </div>
+        <div class="form-group">
+          <label for="fb-source">How did you hear about us?</label>
+          <div class="custom-select-wrap">
+            <select id="fb-source">
+              <option value="" disabled selected>Select an option</option>
+              <option value="instagram">📸 Instagram</option>
+              <option value="facebook">👍 Facebook</option>
+              <option value="youtube">▶️ YouTube</option>
+              <option value="friend">🤝 Friend / Word of Mouth</option>
+            </select>
+            <i class="fas fa-chevron-down select-arrow"></i>
+          </div>
+        </div>
+        <button class="btn btn-primary feedback-submit-btn" id="fb-submit" type="button">
+          <i class="fas fa-paper-plane"></i> Send Feedback
+        </button>
+        <div class="feedback-success" id="feedback-success">
+          <i class="fas fa-check-circle"></i> Thank you! Your feedback means the world to us 🔥
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="contact-cards" data-aos="fade-up">
 
     <div class="contact-card">
@@ -371,10 +571,11 @@
       <i class="fas fa-map-marker-alt"></i>
       <h4>Find Us</h4>
       <p>Porwal Rd, opp. Hotel Torna Lodge, Lohegaon, Pune</p>
-      <a href="https://maps.google.com/?q=Porwal+Rd+Lohegaon+Pune" target="_blank" class="btn btn-sm">Directions</a>
+      <a href="https://www.google.com/maps/place/Charles+%26+Flames/@18.5980534,73.9086507,20.25z" target="_blank" class="btn btn-sm">Directions</a>
     </div>
 
   </div>
+
 </section>
 
 <!-- ===== REVIEWS SECTION ===== -->

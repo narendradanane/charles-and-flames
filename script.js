@@ -396,3 +396,123 @@ document.addEventListener('click', e => {
     document.body.style.overflow = '';
   }
 });
+
+/* ===== FEEDBACK FORM ===== */
+(function initFeedbackForm() {
+  const submitBtn   = document.getElementById('fb-submit');
+  const successMsg  = document.getElementById('feedback-success');
+  const dropdown    = document.getElementById('fb-source-dropdown');
+  const selected    = document.getElementById('fb-source-selected');
+  const list        = document.getElementById('fb-source-list');
+  const hiddenInput = document.getElementById('fb-source');
+  if (!submitBtn) return;
+
+  /* ── Dropdown: toggle open/close ── */
+  selected.addEventListener('click', (e) => {
+    e.stopPropagation();
+    dropdown.classList.toggle('open');
+  });
+
+  /* ── Dropdown: pick an item ── */
+  list.querySelectorAll('.dropdown-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const value = item.dataset.value;
+      const icon  = item.querySelector('i').outerHTML;
+      const text  = item.textContent.trim();
+
+      hiddenInput.value = value;
+      selected.innerHTML = `
+        <span class="dropdown-selected-content">${icon} ${text}</span>
+        <i class="fas fa-chevron-down dropdown-arrow"></i>
+      `;
+      list.querySelectorAll('.dropdown-item').forEach(i => i.classList.remove('selected'));
+      item.classList.add('selected');
+      dropdown.classList.remove('open');
+      dropdown.classList.remove('error');
+    });
+  });
+
+  /* ── Close dropdown on outside click ── */
+  document.addEventListener('click', (e) => {
+    if (!dropdown.contains(e.target)) dropdown.classList.remove('open');
+  });
+
+  /* ── Submit via Web3Forms fetch ── */
+  submitBtn.addEventListener('click', async () => {
+    const nameEl     = document.getElementById('fb-name');
+    const emailEl    = document.getElementById('fb-email');
+    const feedbackEl = document.getElementById('fb-feedback');
+    const replytoEl  = document.getElementById('fb-replyto');
+
+    const name     = nameEl.value.trim();
+    const email    = emailEl.value.trim();
+    const feedback = feedbackEl.value.trim();
+    const source   = hiddenInput.value;
+
+    /* Validate */
+    let valid = true;
+    [[nameEl, name], [emailEl, email], [feedbackEl, feedback]].forEach(([el, val]) => {
+      if (!val) {
+        valid = false;
+        el.style.borderColor = '#ef5350';
+        el.addEventListener('input', () => el.style.borderColor = '', { once: true });
+      }
+    });
+    if (!source) {
+      valid = false;
+      dropdown.classList.add('error');
+    }
+    if (!valid) return;
+
+    /* Mirror email into replyto so you can reply directly from Gmail */
+    replytoEl.value = email;
+
+    /* Lock button */
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+    /* Build payload */
+    const payload = {
+      access_key : '2aa8e259-163c-4525-b0a8-2c83b6f43e2a',
+      subject    : 'New Feedback – Charles & Flames',
+      from_name  : 'Charles & Flames Feedback',
+      replyto    : email,
+      name       : name,
+      email      : email,
+      message    : feedback,
+      source     : source,
+    };
+
+    try {
+      const res  = await fetch('https://api.web3forms.com/submit', {
+        method  : 'POST',
+        headers : { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body    : JSON.stringify(payload),
+      });
+      const data = await res.json();
+
+      if (data.success) {
+        /* ── Trigger the existing success state ── */
+        successMsg.style.display = 'block';
+        submitBtn.style.display  = 'none';
+
+        /* Reset fields */
+        nameEl.value     = '';
+        emailEl.value    = '';
+        feedbackEl.value = '';
+        hiddenInput.value = '';
+        selected.innerHTML = `<span class="dropdown-placeholder">Select an option</span><i class="fas fa-chevron-down dropdown-arrow"></i>`;
+      } else {
+        /* Web3Forms returned an error — restore button, log details */
+        console.error('Web3Forms error:', data);
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Feedback';
+      }
+    } catch (err) {
+      /* Network / fetch error — restore button, log details */
+      console.error('Submission failed:', err);
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Feedback';
+    }
+  });
+})();
