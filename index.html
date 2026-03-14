@@ -505,14 +505,20 @@
       <h3 class="feedback-form-title">Share Your <span class="gold">Feedback</span></h3>
       <p class="feedback-form-sub">We'd love to hear from you 🔥</p>
       <div class="feedback-form" id="feedback-form">
+
+        <!-- Web3Forms hidden fields -->
+        <input type="hidden" name="access_key" value="2aa8e259-163c-4525-b0a8-2c83b6f43e2a" />
+        <input type="hidden" name="subject" value="New Feedback – Charles & Flames" />
+        <input type="hidden" name="from_name" value="Charles & Flames Website" />
+        <input type="hidden" id="fb-replyto" name="replyto" value="" />
         <div class="form-row">
           <div class="form-group">
             <label for="fb-name">Your Name</label>
-            <input type="text" id="fb-name" placeholder="e.g. Vinay Agarwal" autocomplete="off" />
+            <input type="text" id="fb-name" placeholder="e.g. Rahul Patil" autocomplete="off" />
           </div>
           <div class="form-group">
             <label for="fb-email">Email Address</label>
-            <input type="email" id="fb-email" placeholder="e.g. vinayagarwal@email.com" autocomplete="off" />
+            <input type="email" id="fb-email" placeholder="e.g. rahul@email.com" autocomplete="off" />
           </div>
         </div>
         <div class="form-group">
@@ -520,16 +526,27 @@
           <textarea id="fb-feedback" rows="4" placeholder="Tell us about your experience at Charles & Flames..."></textarea>
         </div>
         <div class="form-group">
-          <label for="fb-source">How did you hear about us?</label>
-          <div class="custom-select-wrap">
-            <select id="fb-source">
-              <option value="" disabled selected>Select an option</option>
-              <option value="instagram">📸 Instagram</option>
-              <option value="facebook">👍 Facebook</option>
-              <option value="youtube">▶️ YouTube</option>
-              <option value="friend">🤝 Friend / Word of Mouth</option>
-            </select>
-            <i class="fas fa-chevron-down select-arrow"></i>
+          <label>How did you hear about us?</label>
+          <div class="custom-dropdown" id="fb-source-dropdown">
+            <div class="dropdown-selected" id="fb-source-selected">
+              <span class="dropdown-placeholder">Select an option</span>
+              <i class="fas fa-chevron-down dropdown-arrow"></i>
+            </div>
+            <ul class="dropdown-list" id="fb-source-list">
+              <li class="dropdown-item" data-value="instagram">
+                <i class="fab fa-instagram dropdown-icon instagram-icon" style="color:#e1306c;filter:drop-shadow(0 0 7px #e1306c);"></i> Instagram
+              </li>
+              <li class="dropdown-item" data-value="facebook">
+                <i class="fab fa-facebook-f dropdown-icon facebook-icon" style="color:#1877f2;filter:drop-shadow(0 0 7px #1877f2);"></i> Facebook
+              </li>
+              <li class="dropdown-item" data-value="youtube">
+                <i class="fab fa-youtube dropdown-icon youtube-icon" style="color:#ff0000;filter:drop-shadow(0 0 7px #ff0000);"></i> YouTube
+              </li>
+              <li class="dropdown-item" data-value="friend">
+                <i class="fas fa-user-friends dropdown-icon friend-icon" style="color:#c9933a;filter:drop-shadow(0 0 7px rgba(201,147,58,0.95));"></i> Friend / Word of Mouth
+              </li>
+            </ul>
+            <input type="hidden" id="fb-source" value="" />
           </div>
         </div>
         <button class="btn btn-primary feedback-submit-btn" id="fb-submit" type="button">
